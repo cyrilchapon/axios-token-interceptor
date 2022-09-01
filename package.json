@@ -4,6 +4,7 @@
   "author": "Sandrino Di Mattia",
   "license": "MIT",
   "type": "module",
+  "private": "false",
   "exports": {
     "import": "./dist/esm/index.js",
     "require": "./dist/cjs/index.js",
