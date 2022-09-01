@@ -1,6 +1,6 @@
 {
   "name": "@chimanos/axios-token-interceptor",
-  "version": "1.0.0",
+  "version": "1.0.1-0",
   "author": "Cyril CHAPON",
   "license": "MIT",
   "type": "module",
