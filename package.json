@@ -1,7 +1,7 @@
 {
-  "name": "axios-token-interceptor",
-  "version": "0.2.0",
-  "author": "Sandrino Di Mattia",
+  "name": "@chimanos/axios-token-interceptor",
+  "version": "1.0.0",
+  "author": "Cyril CHAPON",
   "license": "MIT",
   "type": "module",
   "private": "false",
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/sandrinodimattia/axios-token-interceptor"
+    "url": "git://github.com/cyrilchapon/axios-token-interceptor"
   },
   "devDependencies": {
     "@types/jest": "^29.0.0",
