@@ -29,9 +29,8 @@ type Cache<T> = {
 }
 
 type GetValue<T> = () => T | Promise<T>
-type AwaitedReturnType<GT extends (...args: any) => any> = Awaited<ReturnType<GT>>
 
-const buildCache = <GT extends GetValue<any>, T extends AwaitedReturnType<GT>> (getValue: GT, options?: BuildCacheOptions<T>): Cache<T> => {
+const buildCache = <GT extends GetValue<any>, T extends Awaited<ReturnType<GT>>> (getValue: GT, options?: BuildCacheOptions<T>): Cache<T> => {
   const lock = Lock()
 
   const _getMaxAge = safeMaxAge(options?.maxAge)
@@ -79,7 +78,7 @@ const buildCache = <GT extends GetValue<any>, T extends AwaitedReturnType<GT>> (
   return cache
 }
 
-type CacheBuilder<GT extends GetValue<any>, T extends AwaitedReturnType<GT>> = typeof buildCache<GT, T>
+type CacheBuilder<GT extends GetValue<any>, T extends Awaited<ReturnType<GT>>> = typeof buildCache<GT, T>
 
 export type {
   Cache,

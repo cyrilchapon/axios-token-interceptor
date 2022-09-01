@@ -1,5 +1,5 @@
-import { buildCache, CacheBuilder, GetValue } from './cache'
-import type { AxiosRequestConfig, AxiosInterceptorOptions } from 'axios'
+import { GetValue } from './cache'
+import type { AxiosRequestConfig } from 'axios'
 
 type GetToken<T> = GetValue<T>
 
@@ -38,14 +38,25 @@ const tokenInterceptor = <T> (options: TokenInterceptorOptions<T>) => {
   return interceptRequest
 }
 
-type TokenInterceptor = typeof tokenInterceptor
+type TokenInterceptor<T> = typeof tokenInterceptor<T>
 
 export type {
   TokenInterceptor,
   TokenInterceptorOptions,
   GetToken
 }
+
 export {
   tokenInterceptor,
-  buildCache as tokenCache
 }
+
+export {
+  buildCache as tokenCache
+} from './cache'
+
+export type {
+  Cache,
+  CacheBuilder,
+  BuildCacheOptions,
+  GetValue
+} from './cache'
