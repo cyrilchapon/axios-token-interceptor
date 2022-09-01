@@ -1,10 +1,11 @@
 {
   "name": "axios-token-interceptor",
   "version": "0.2.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "author": "Sandrino Di Mattia",
   "license": "MIT",
   "scripts": {
+    "build": "tsc -p tsconfig.build.json",
     "test:watch": "jest --watch",
     "test": "jest --colors --coverage --forceExit"
   },
